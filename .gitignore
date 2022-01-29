@@ -1,0 +1,13 @@
+/.vscode
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+/dist
+/node_modules
+.DS_Store
+.classpath
+.project
+Thumbs.db
+npm-debug.log
+*.iml
