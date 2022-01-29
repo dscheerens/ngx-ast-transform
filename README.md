@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/dscheerens/ngx-ast-transform/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/dscheerens/ngx-ast-transform/actions/workflows/main.yml) [![NPM Version](https://img.shields.io/npm/v/ngx-ast-transform.svg)](https://www.npmjs.com/package/ngx-ast-transform)
+[![Build Status](https://github.com/dscheerens/ngx-ast-transform/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/dscheerens/ngx-ast-transform/actions/workflows/main.yml) [![NPM Version](https://img.shields.io/npm/v/ngx-ast-transform.svg)](https://www.npmjs.com/package/ngx-ast-transform)
 
 # ngx-ast-transform
 
