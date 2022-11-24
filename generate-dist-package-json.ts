@@ -25,7 +25,7 @@ async function generateDistributionPackageJsonFile(): Promise<void> {
     );
 }
 
-function omit<T, K extends keyof T>(value: T, ...keys: K[]): Omit<T, K> {
+function omit<T extends {}, K extends keyof T>(value: T, ...keys: K[]): Omit<T, K> {
     return Object.entries(value).reduce(
         (result, [key, value]) => keys.includes(key as K) ? result : { ...result, [key]: value },
         {} as Omit<T, K>,
