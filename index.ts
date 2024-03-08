@@ -10,7 +10,21 @@ export function addTransformer(webpackConfig: Configuration, createTransformers:
     const plugins = (webpackConfig.plugins ?? []);
 
     const angularWebpackPlugin = plugins.find(
-        (plugin): plugin is AngularWebpackPluginWithPrivateApi => plugin instanceof AngularWebpackPlugin,
+        (plugin): plugin is AngularWebpackPluginWithPrivateApi => {
+            if (plugin instanceof AngularWebpackPlugin) {
+                return true;
+            }
+
+            const pluginPrototype: unknown = Object.getPrototypeOf(plugin);
+
+            return (
+                typeof pluginPrototype === 'object' &&
+                pluginPrototype !== null &&
+                'constructor' in pluginPrototype &&
+                typeof pluginPrototype.constructor === 'function' &&
+                pluginPrototype.constructor.name === AngularWebpackPlugin.name
+            );
+        },
     );
 
     if (!angularWebpackPlugin) {
