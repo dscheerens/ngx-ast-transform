@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "npm run build:clean && npm run build:compile && npm run build:package-json && npm run build:copy-assets",
-    "build:clean": "rimraf dist/*",
+    "build:clean": "rimraf ./dist",
     "build:compile": "tsup index.ts --dts --format cjs",
     "build:package-json": "ts-node generate-dist-package-json.ts",
     "build:copy-assets": "ncp README.md dist/README.md",
