@@ -1,6 +1,6 @@
 {
   "name": "ngx-ast-transform",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Library to add (custom) TypeScript AST transformers to the Angular CLI build pipeline",
   "homepage": "https://github.com/dscheerens/ngx-ast-transform",
   "author": "Daan Scheerens",
